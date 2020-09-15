@@ -1,0 +1,258 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: border 0.4s ease-in-out;
+  // background-color: white;
+
+  @include media-breakpoint-down(sm) {
+    height: 60px;
+  }
+
+  nav {
+    @include list-unstyled;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      a {
+        transition: color 0.3s ease;
+        &:hover {
+          color: white;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      // .i-action-search {
+      //   padding: 3px 0 3px 13px;
+      // }
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    margin-right: auto;
+    height: 100%;
+    z-index: 99;
+    position: relative;
+    width: auto;
+  }
+
+  .container-fluid,
+  .row {
+    height: 100%;
+  }
+
+  .drop-title {
+    .icon-caret {
+      transform: rotate(180deg);
+      transition: transform 0.1s ease;
+    }
+
+    &:hover {
+      .icon-caret {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .i-action-search {
+    color: $blue;
+    border: 0;
+  }
+}
+
+#burger-menu,
+.burger-sub-menu {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 16px;
+  z-index: 99;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    right: 15px;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0b0b0b;
+    transition: background-color 0.25s, transform 0.25s;
+    -webkit-transition: background-color 0.25s, -webkit-transform 0.25s;
+
+    &:nth-of-type(1) {
+      top: 25%;
+    }
+
+    &:nth-of-type(4) {
+      top: 75%;
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      top: 50%;
+    }
+  }
+
+  &.show {
+    span {
+      background-color: #0b0b0b;
+
+      &:nth-of-type(1),
+      &:nth-of-type(4) {
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+      }
+
+      &:nth-of-type(2) {
+        transform: rotate(-45deg);
+        -webkit-transform: scaleX(-45deg);
+      }
+      &:nth-of-type(3) {
+        transform: rotate(45deg);
+        -webkit-transform: scaleX(45deg);
+      }
+    }
+  }
+}
+
+.burger-sub-menu {
+  right: auto;
+  left: 15px;
+}
+
+.header-menu {
+  pointer-events: none;
+  width: 369px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  padding-top: 80px;
+  background: white;
+  transition: right 0.4s ease;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  &.show {
+    pointer-events: all;
+    right: 0%;
+  }
+}
+
+.nav-mobile-menu {
+  .nav-item {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid $gray;
+
+    &:last-child {
+      border-bottom: 0px;
+    }
+
+    &:first-child {
+      padding-top: 0px;
+    }
+    .nav-link {
+      padding: 0.5rem 0rem;
+
+      .icon-caret {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.header-sub-menu {
+  position: fixed;
+  width: 369px;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  background: white;
+  z-index: 99;
+  transition: right 0.4s ease;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  .controls {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray;
+    z-index: 6060;
+
+    @include media-breakpoint-down(sm) {
+      height: 60px;
+    }
+  }
+  &.show {
+    pointer-events: all;
+    right: 0%;
+  }
+
+  &-left {
+    left: -100%;
+    right: auto;
+    transition: left 0.4s ease;
+    &.show {
+      pointer-events: all;
+      left: 0%;
+    }
+  }
+}
+
+.header-sub-search {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  transition: top 400ms ease-in-out;
+
+  &.show {
+    top: 100px;
+    @include media-breakpoint-down(sm) {
+      top: 80px;
+    }
+  }
+  .i-action-search {
+    border: 1px solid $gray;
+    #seach-input {
+      width: 100% !important;
+    }
+    form input:placeholder-shown {
+      width: 100% !important;
+    }
+    form input:focus {
+      outline: 0;
+      border: 0px !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+}
+@include media-breakpoint-down(sm) {
+  header {
+    width: 100%;
+  }
+}
