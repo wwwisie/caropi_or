@@ -1,77 +1,86 @@
 <div class="container-fluid">
-    <div class="row align-content-center justify-content-between bg-white">
-        <div class="col col-md-2 col-lg d-none d-lg-flex align-items-center justify-content-start">
-            <!-- NAV LIST -->
-            <nav class="nav nav-pills nav-fill header-text">
-                <ul>
-                    <li class="nav-item"><a href="./cursos.html" class="nav-link">aprende</a></li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link">infórmate</a></li>
-                    <li class="nav-item"><a href="./centros.html" class="nav-link">centros</a></li>
-                    <li class="nav-item"><a href="./centros.html" class="nav-link">centros</a></li>
-                </ul>
-            </nav>
-            <!-- END: NAV LIST -->
-        </div>
-        <div class="col col-md-2 col-lg-2 d-flex d-md-block">
-            <!-- LOGO -->
-            <a href="./" class="logo d-flex">
-                <svg class="header-logo d-none d-md-block my-auto" aria-hidden="true" role="icon">
-                    <use href="#header-logo" xlink:href="#header-logo"></use>
-                </svg>
-            </a>
-            <!-- END: LOGO -->
-        </div>
-        <div class="col col-md-2 col-lg d-none d-lg-flex align-items-center justify-content-end">
-            <!-- NAV LIST -->
-            <nav class="nav nav-pills nav-fill header-text">
-                <ul>
-                    <li class="nav-item"><a href="./cursos.html" class="nav-link">aprende</a></li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link">infórmate</a></li>
-                    <li class="nav-item"><a href="./centros.html" class="nav-link">centros</a></li>
-                    <li class="nav-item"><a href="./centros.html" class="nav-link">centros</a></li>
-                </ul>
-            </nav>
-            <!-- END: NAV LIST -->
-        </div>
-        <div class="col burger-wrap d-flex justify-content-end align-items-center d-lg-none">
-            <div class="i-action-search pill pill-input pill-mobile d-flex d-md-none">
-                <!-- <input type="text" id="search-mobile-input" placeholder="search"> -->
-                <a href="#" class="pointer" data-toggle="show" data-target=".header-sub-search" role="button" aria-expanded="false" aria-controls=".header-sub-search">
-                    <svg class="icon-search" aria-hidden="true" role="icon">
-                        <use href="#icon-search" xlink:href="#icon-search"></use>
-                    </svg>
+    <div class="row align-content-center justify-content-between">
+        <div class="col-2 d-block">
+            <div class="burger-wrap">
+                <a href="#" id="burger-menu" data-toggle="show" data-target="#header-modal" role="button" aria-expanded="false" aria-controls="header-modal">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
             </div>
-            <a id="burger-menu" class="d-block" data-toggle="show" data-target=".header-menu, #burger-menu" role="button" aria-expanded="false" aria-controls="header-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+        <div class="col-2 col-md-1 col-lg-1">
+            <div class="flex align-content-center justify-content-between">
+                <form class="switch">
+                    <input class="check" type="checkbox" name="switch" value="on">
+                    <div class="button"></div>
+                    <div class="bg" id="bg2"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SIDE MODAL -->
+<div id="header-modal" class="side-modal side-modal-left">
+    <!-- MODAL CONTROLS -->
+    <div class="controls controls-absolute">
+        <div class="text-right">
+            <a href="#" data-toggle="show" data-target="#side-modal" role="button" aria-expanded="false" aria-controls="newsletter-modal">
+                <svg class="icon-close" aria-hidden="true" role="icon">
+                    <use href="#icon-close" xlink:href="#icon-close"></use>
+                </svg>
             </a>
         </div>
     </div>
-
-    <div class="header-menu d-lg-none">
-        <ul class="nav nav-mobile-menu flex-column link mx-5">
-            <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between" data-toggle="show" data-target="#header-sub-menu-sobre, .header-menu" role="button" aria-expanded="false"
-                    aria-controls="header-sub-menu">
-                    <div>
-                        Sobre Epi
+    <!-- END: MODAL CONTROLS -->
+    
+    <div class="header-menu pb-10 pt-40">
+        <div class="content-wrap">
+            <div class="top-content">
+                <div class="title pb-20">
+                    Projects
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="button_show link">
+                                <a href="https://pertenecer.me" target="_blank">
+                                    → Pertenecer
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="button_show link">
+                                <a href="https://nukitacoffee.com/" target="_blank">
+                                    → Nukita Coffee
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom-content">
+                <div class="about">
+                    <div class="pb-20 link">
+                        Contact
                     </div>
-                    <div class="d-flex align-items-center">
-                        <svg class="icon-caret cursor-pointer">
-                            <use href="#icon-caret" xlink:href="#icon-caret"></use>
-                        </svg>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item"><a href="./cursos.html" class="nav-link">Aprende</a></li>
-            <li class="nav-item"><a href="./blog.html" class="nav-link">Infórmate</a></li>
-            <li class="nav-item"><a href="./centros.html" class="nav-link">Centros</a></li>
-            <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Portal de Suministro</a></li>
-        </ul>
+                </div>
+                <div class="credits link">
+                    <ul>
+                        <li class="pb-20 link">
+                            <div>
+                                Email
+                            </div>
+                            <div>
+                                <a href="mailto:carolina@anagrama.com" target="_blank">carolina@anagrama.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
+<!-- END: SIDE MODAL -->

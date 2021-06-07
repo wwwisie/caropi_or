@@ -1,0 +1,24 @@
+.bl-text-gray {
+    border-left: 1px solid currentColor;
+    
+    @include media-breakpoint-down(md){
+        border-top: 1px solid currentColor;
+        border-left: 0px;
+    }
+}
+
+.bb-down-md{
+    border-bottom: 1px solid currentColor;
+}
+
+.bt-current {
+    border-top: 1px solid currentColor;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.top-55 {
+    top: 55px;
+}

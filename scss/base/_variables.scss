@@ -16,8 +16,10 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #080808;
-.c-black {
-  color: $black;
+$text-gray: #857580;
+
+.c-text-gray {
+  color: $text-gray;
 }
 .bg-black {
   background-color: $black;
@@ -37,7 +39,7 @@ $gray: #d2d2d2;
 }
 
 // Custom colors
-$night: #313131;
+$night: #241F21;
 $error: red;
 
 // Custom Backgrounds
@@ -75,12 +77,9 @@ $figure-caption-color: $gray-600;
 $bezier: cubic-bezier(.445, .5, .55, .95);
 
 // Types
-$font-body: 'Scto Grotesk A';
-$font-secondary: '';
-$font-title: 'Scto Grotesk A';
-$font-script: '';
+$font-body: 'GT America';
 
-$headings-font-family: $font-title;
+$headings-font-family: $font-body;
 $headings-font-weight: normal;
 $headings-color: $title-text-color;
 
@@ -95,14 +94,8 @@ $hr-border-width: $border-width;
   font-style : normal;
 }
 
-%type-secondary {
-  font-family: $font-secondary;
-  font-weight: normal;
-  font-style : normal;
-}
-
 %type-title {
-  font-family: $font-title;
+  font-family: $font-body;
   font-weight: normal;
   font-style : normal;
 }
