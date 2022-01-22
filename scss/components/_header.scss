@@ -1,7 +1,7 @@
 header {
-  position: fixed;
+  position: sticky;
   width: 100%;
-  height: 40px;
+  height: 54px;
   border-bottom: 1px solid $text-gray;
   background-color: $night;
   top: 0;
@@ -11,29 +11,28 @@ header {
 
   form {
     position: relative;
-    margin: 10px auto;
-    width: 30px;
-    height: 16px;
+    width: 40px;
+    height: 20px;
 
     .bg {
       position: absolute;
-      width: 31px;
-      height: 18px;
-      box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.02) inset, 0px 0px 0px 1px $text-gray inset;
+      width: 100%;
+      height: 100%;
+      // box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.02) inset, 0px 0px 0px 1px $text-gray inset;
       border-radius: 11px;
-      background: $text-gray;
+      border: 1px solid $text-gray;
       -webkit-transition: background 0.3s, box-shadow 0.4s;
       -moz-transition: background 0.3s, box-shadow 0.4s;
       transition: background 0.3s, box-shadow 0.4s;
     }
 
     input[type="checkbox"]:checked ~ #bg2 {
-      box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.02) inset, 0px 0px 0px 13px $text-gray inset;
+      // box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.02) inset, 0px 0px 0px 13px $text-gray inset;
       background: $text-gray;
     }
 
     input[type="checkbox"]:checked ~ .button {
-      left: 14px;
+      left: calc(100% - 20px);
     }
 
     input {
@@ -41,8 +40,8 @@ header {
       top: -2;
       left: -2;
       opacity: 0;
-      width: 30px;
-      height: 16px;
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
       cursor: pointer;
@@ -51,14 +50,13 @@ header {
 
     .button {
       left: 0;
-      width: 16px;
-      height: 16px;
-      border: 1px solid;
-      box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.02) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-      background: $black;
+      width: 20px;
+      height: 100%;
+      border: 0px solid;
+      background: $text-gray;
       border-radius: 10px;
       position: absolute;
-      margin: 1px;
+      margin: 0px;
       z-index: 19;
       -webkit-transition: left 0.3s;
       -moz-transition: left 0.3s;
@@ -81,7 +79,7 @@ header {
 .burger-wrap {
   width: 45px;
   height: 40px;
-  border-right: 1px solid $text-gray;
+  // border-right: 1px solid $text-gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,8 +87,8 @@ header {
   #burger-menu {
     position: absolute;
     left: 18px;
-    width: 20px;
-    height: 20px;
+    width: 27px;
+    height: 16px;
     z-index: 99;
     cursor: pointer;
 
@@ -104,11 +102,11 @@ header {
       -webkit-transition: background-color 0.25s, -webkit-transform 0.25s;
 
       &:nth-of-type(1) {
-        top: 25%;
+        top: 0%;
       }
 
       &:nth-of-type(4) {
-        top: 75%;
+        top: 100%;
       }
 
       &:nth-of-type(2),
@@ -117,7 +115,7 @@ header {
       }
     }
 
-    &.open {
+    &.show {
       span {
         background-color: $text-gray;
 
@@ -142,7 +140,7 @@ header {
 
 .header-menu {
   // display: none;
-  width: 400px;
+  width: calc(50% + 1px);
   height: 100%;
   // position: fixed;
   // padding-top: 10px;
@@ -173,17 +171,17 @@ body.dark_mode {
     background-color: $off-white;
     form {
       .bg {
-        box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 0px 0px 1px $text-gray inset;
+        // box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 0px 0px 1px $text-gray inset;
         background: $text-gray;
       }
 
       input[type="checkbox"]:checked ~ #bg2 {
-        box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 0px 0px 13px $night inset;
+        // box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 0px 0px 13px $night inset;
         background: $off-white;
       }
 
       .button {
-        box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 2px 4px 0px rgba(255, 255, 255, 0.2);
+        // box-shadow: 0 -12px 15px rgba(255, 255, 255, 0.02) inset, 0px 2px 4px 0px rgba(255, 255, 255, 0.2);
         background: $text-gray;
       }
     }
@@ -194,7 +192,7 @@ body.dark_mode {
     border-right: 1px solid $text-gray;
   }
   .burger-wrap {
-    border-right: 1px solid $night;
+    // border-right: 1px solid $night;
     #burger-menu {
       span {
         background-color: $night;

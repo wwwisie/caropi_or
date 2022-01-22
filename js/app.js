@@ -4,7 +4,6 @@ var site = {
   ready: ready,
   // 2nd function to fire
   load: load,
-  scroll: scroll,
   resize: resize,
   responsive: function getResponsive() {
     var windowWidth = window.innerWidth;
@@ -28,8 +27,6 @@ function ready() {
   $("header").load("./partials/_header.html");
   $("footer").load("./partials/_footer.html");
   $("#svg").load("./partials/_svg.html");
-
-  scroll();
 
   var waitExist = setInterval(function () {
     if ($('#burger-menu').length) {
@@ -65,6 +62,13 @@ function load() {
 
 $(window).on('load', function () {
   site.load();
+});
+
+var lastScrollTop = 0;
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+  $(".circle-rotate").css("transform", `rotate(${(st * .5)}deg)`)
+  lastScrollTop = st;
 });
 
 

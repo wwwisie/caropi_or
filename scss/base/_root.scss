@@ -313,3 +313,10 @@ body.dark_mode {
     }
   }
 }
+
+.underline-links{
+  a{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
